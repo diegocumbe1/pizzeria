@@ -1,0 +1,29 @@
+<div *ngFor="let product of productos" class="card card-body mb-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+
+            <ul class="mx-auto">
+                <li>
+                    id: {{product._id }}
+                </li>
+                <li>
+                    name: {{product.name }}
+                </li>
+                <li>
+                    description: {{product.descripcion }}
+                </li>
+                <li>
+                    price: {{product.precio }}
+                </li>
+
+            </ul>
+            <button (click)="adicionarCarrito(producto)" class="btn btn-success  btn-primary btn-lg btn-block">
+          agregar al pedido
+        </button>
+
+        </div>
+        <div class="col-md-4">
+            <img [src]="product.imageURL" class="card-img">
+        </div>
+    </div>
+</div>
